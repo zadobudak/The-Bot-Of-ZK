@@ -10,7 +10,6 @@ from random import shuffle
 import time
 import translators as ts
 
-
 score = 0
 
 client = discord.Client()
