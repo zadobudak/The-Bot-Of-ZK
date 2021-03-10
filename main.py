@@ -10,9 +10,9 @@ from random import shuffle
 import time
 import translators as ts
 
-global score
+
 score = 0
-mssg1 = mssg2 = False
+
 client = discord.Client()
 # onlar bakip ibret alsinlar diye bu kodu yaratti onlar bilirler ki spagetti kod
 #yazanlar azabi deneyimleyecektir
@@ -48,7 +48,6 @@ async def on_message(message):  #x takım sayısı
     # print(aut.name)
     if aut == client.user:
         return
-    global mssg1, mssg2
     
     # print(type(aut))
 
@@ -90,8 +89,8 @@ async def on_message(message):  #x takım sayısı
         await message.channel.send("Wrong input type!")
     
 
-    elif msg.startswith('!g'):
-        await letter_game(message, score)
+    elif message.channel.id == 817582872159977542:
+        await letter_game(message)
         
 
     elif msg.startswith('!yenidena'):
